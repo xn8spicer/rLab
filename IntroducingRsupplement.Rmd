@@ -18,7 +18,7 @@ From the RStudio Menu Bar select Project-> Create project. Then select From New 
 Confirm that your working directory is the new directory you created with getwd().
 
 #### To attach or not to attach?
-Most R afficionados advise against the use of `attach`.  One of the main reasons is that it is only 'one-way' in the sense that existing variables are assumed to be in the data frame that is attached, but newly created variables are in the global workspace.  This can be confusing.  Consider the following...
+Most R afficionados advise against the use of `attach`.  One of the main reasons is that newly created variables are placed in the global workspace and not related to the attached data.  This means that you could intentionally or inadvertently have two variables with the same name.  This can be confusing.  Consider the following...
 
 ```{r}
 library(ggplot2)
