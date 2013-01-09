@@ -2,6 +2,11 @@ Supplement to "Introducing R" for PRI workshop January 2013
 ===========================================================
 *Note: We will refer to the 4 default RStudio pane layout as UL(Upper Left), UR (Upper Right), LR(Lower Right), LL(Lower Left) in this document.  Be sure to install the packages: ggplot2 and splines.*
 
+### Section 2
+R is updated frequently, if you want to know the current version, visit [http://cran.r-project.org](http://cran.r-project.org).   
+
+R is installed on the PRI lab computers, however RStudio is currently only available on the PRI windows servers (kiev and moscow) and the PRI linux server (finland). 
+
 ### Section 2.2
 Programming languages deal with zero division differently.  In some cases any opertation attempting division by zero is prohibited.  R will allow you to proceed, but results vary.  Consider these calcuations...
 ```
