@@ -33,7 +33,6 @@ Try using the following statement to make a prettier plot with the ggplot2 packa
 library(ggplot2)
 qplot(z,d, type="l", main="The Standard Normal Density", col.main="cornflowerblue")
 ```
-
 Use the Export menu in the Plots tab of the LR RStudio pane for easy options to save/copy your plot.
 
 ### Section 3.2 
@@ -52,6 +51,8 @@ save(fpe, file="fpe.Rdata" )
 rm(fpe)
 load(file="fpe.Rdata")
 ```
+For the exercise on page 13, you can use RStudio to create a text file.  Be sure to hit <return> in the last line of data. 
+
 
 ### Section 3.4
 
@@ -101,6 +102,9 @@ RStudio encourages the use of fully-qualified names with the 'code completion' f
 Note that when you use `Identify` the LR window will tell you that the command is active and you can use `esc` to exit.
 
 RStudio Projects will not automatically clear your data from the worspace.   Close your project and re-open it. 
+
+### Section 4.4
+Try examining *effort* and *effortg* with display, table and plot commands.   
 
 ### Section 5.2
 
