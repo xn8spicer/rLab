@@ -42,6 +42,13 @@ plot(mydata$y)
 mydata$y.f <- factor(mydata$y,
                      levels = c(1,3, 5),
                      labels = c("Low", "Medium", "High"))
+unclass(mydata$y.f)
 mydata$y.of <- ordered(mydata$y,
                      levels = c(1,3, 5),
                      labels = c("Low", "Medium", "High"))
+
+# Ask whether Jason has shown them 'with'
+
+# Fix
+x<-data.frame()
+fix(x)

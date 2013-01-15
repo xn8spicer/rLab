@@ -64,6 +64,7 @@ head(fpe)
 tail(fpe)
 str(fpe)
 
+
 # What's the difference?
 table(fpe$setting)
 table(fpe$effort==0,fpe$setting)
@@ -99,6 +100,7 @@ Which distance did you plot the second time?  View the 'cars' dataframe in your 
 search()
 ```
 RStudio encourages the use of fully-qualified names with the 'code completion' feature using the 'tab' key.   From the console or an Rscript editing window, practice using this feature.  
+
 
 ### Section 3.5
 Note that when you use `Identify` the LR window will tell you that the command is active and you can use `esc` to exit.
