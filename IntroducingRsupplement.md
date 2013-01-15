@@ -2,6 +2,11 @@ Supplement to "Introducing R" for PRI workshop January 2013
 ===========================================================
 *Note: We will refer to the 4 default RStudio pane layout as UL(Upper Left), UR (Upper Right), LR(Lower Right), LL(Lower Left) in this document.  Be sure to install the packages: ggplot2 and splines.*
 
+### Section 2
+R is updated frequently, if you want to know the current version, visit [http://cran.r-project.org](http://cran.r-project.org).   
+
+R is installed on the PRI lab computers, however RStudio is currently only available on the PRI windows servers (kiev and moscow) and the PRI linux server (finland). 
+
 ### Section 2.2
 Programming languages deal with zero division differently.  In some cases any opertation attempting division by zero is prohibited.  R will allow you to proceed, but results vary.  Consider these calcuations...
 ```
@@ -28,7 +33,6 @@ Try using the following statement to make a prettier plot with the ggplot2 packa
 library(ggplot2)
 qplot(z,d, type="l", main="The Standard Normal Density", col.main="cornflowerblue")
 ```
-
 Use the Export menu in the Plots tab of the LR RStudio pane for easy options to save/copy your plot.
 
 ### Section 3.2 
@@ -47,6 +51,8 @@ save(fpe, file="fpe.Rdata" )
 rm(fpe)
 load(file="fpe.Rdata")
 ```
+For the exercise on page 13, you can use RStudio to create a text file.  Be sure to hit <return> in the last line of data. 
+
 
 ### Section 3.4
 
@@ -98,6 +104,9 @@ RStudio encourages the use of fully-qualified names with the 'code completion' f
 Note that when you use `Identify` the LR window will tell you that the command is active and you can use `esc` to exit.
 
 RStudio Projects will not automatically clear your data from the worspace.   Close your project and re-open it. 
+
+### Section 4.4
+Try examining *effort* and *effortg* with display, table and plot commands.   
 
 ### Section 5.2
 
