@@ -1,6 +1,16 @@
-Supplement to "Introducing R" for PRI workshop January 2013 
+R Interest Group Hands-On Workshop January 2013 
 ===========================================================
 *Note: We will refer to the 4 default RStudio pane layout as UL(Upper Left), UR (Upper Right), LR(Lower Right), LL(Lower Left) in this document.  Be sure to install the packages: ggplot2 and splines.*
+
+### RStudio Projects
+
+From the RStudio menu bar select Project--> Create Project.   Then select 'From New Directory'.  Create a new folder for your project.  This will be assumed to be your  working directory for the session.  Once your new project has been created notice a few things:
+* Locate the drop-down menu above the UR pane.  You can switch projects or set options specific to individual projects.
+* If you had been using RStudio before, note that all panes have been cleared for your new project.   
+* Look in the Files tab of the LR pane
+* Confirm your working directory by typing the `getwd()` command in the LL console pane
+* Close the project and reopen it. 
+* Look at the RStudio preferences and compare them to the Project Options
 
 ### Section 2
 R is updated frequently, if you want to know the current version, visit [http://cran.r-project.org](http://cran.r-project.org).   
@@ -8,6 +18,8 @@ R is updated frequently, if you want to know the current version, visit [http://
 R is installed on the PRI lab computers, however RStudio is currently only available on the PRI windows servers (kiev and moscow) and the PRI linux server (finland). 
 
 ### Section 2.2
+As you work through some of the examples in section 2.2, be sure to examine your Workspace in the UR pane.
+
 Programming languages deal with zero division differently.  In some cases any opertation attempting division by zero is prohibited.  R will allow you to proceed, but results vary.  Consider these calcuations...
 ```
 1/0
@@ -22,10 +34,18 @@ v<-data.frame(c(0/0,1/0,-1/0,1/0==0/0))
 table(v)
 table(v,useNA='always')
 ```
-Just be aware when you are calculating new variables.
+Regardless of what stat package you use, always be aware that missing data is handled differently in every package.  Do not assume, verify your results.
 
 ### Section 2.3
 For a list of matrix operators visit [http://www.statmethods.net/advstats/matrix.html](http://www.statmethods.net/advstats/matrix.html)
+
+### R Scripts
+The commands you have just entered are in your History in the UR pane.   Scroll back through the history to re-execute a command by sending it `To Console`.   A better habit to establish is to store your commands in a script file.   Let's do this with all the commands you have run so far.  
+* From the menu bar select File-->New-->R Script.   A new window will open in the UL pane
+* Highlight all the commands in the history and select 'To Source'
+* Select one or more commands in the UL script window and click on the `Run` icon.  Now try the `Source` icon to run the entire script.  
+* Save your script.  Notice that the color of the tab label changes from red to black.
+
 
 ### Section 2.4
 Try using the following statement to make a prettier plot with the ggplot2 package...
@@ -37,11 +57,6 @@ Use the Export menu in the Plots tab of the LR RStudio pane for easy options to 
 
 ### Section 3.2 
 
-#### RStudio Projects
-
-From the RStudio Menu Bar select Project-> Create project. Then select From New Directory.  
-
-Confirm that your working directory is the new directory you created with getwd().
 
 #### Managing data
 After reading data from an external source into R, you can save time in future sessions by saving the data as an R data frame.   Then if you clear the data from the workspace, you can retrieve it quickly.   Try saving the fpe data set to your working directory, clear it from your workspace and load it back in from the copy in your working directory.
@@ -51,7 +66,7 @@ save(fpe, file="fpe.Rdata" )
 rm(fpe)
 load(file="fpe.Rdata")
 ```
-For the exercise on page 13, you can use RStudio to create a text file.  Be sure to hit <return> in the last line of data. 
+For the exercise on page 13, you can use RStudio to create a text file.  Be sure to hit <return> in the last line of data. There is also a little editor accessible with the `fix` function.
 
 
 ### Section 3.4
@@ -99,16 +114,17 @@ Which distance did you plot the second time?  View the 'cars' dataframe in your 
 ```
 search()
 ```
-RStudio encourages the use of fully-qualified names with the 'code completion' feature using the 'tab' key.   From the console or an Rscript editing window, practice using this feature.  
+RStudio encourages the use of fully-qualified names with the 'code completion' feature using the 'tab' key.   From the console or an Rscript editing window, **practice using this feature**.  Code completion works with names of objects as well as commands.  Try typing a few characters in the command line and hit tab, see what is displayed.
 
 
 ### Section 3.5
 Note that when you use `Identify` the LR window will tell you that the command is active and you can use `esc` to exit.
 
-RStudio Projects will not automatically clear your data from the worspace.   Close your project and re-open it. 
 
 ### Section 4.4
 Try examining *effort* and *effortg* with display, table and plot commands.   
+<!--  PROBABLY NEED A WORKSHOP ON FACTOR VARS -->
+
 
 ### Section 5.2
 
@@ -131,10 +147,9 @@ Look at the object lrfit generated by the `glm` function.
 On page 33, the step command should refer to the object 'lrfit0', not 'additive'
 
 ### More references:
+__RStudio tutorials__
 
-__qplot/ggplot2__
-
-http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf
+http://www.rstudio.com/ide
 
 __Quick command summaries__
 
@@ -143,3 +158,7 @@ http://www.statmethods.net/advstats/matrix.html
 __A fun and informative blog__
 
 http://www.r-bloggers.com
+
+__Tutorial on qplot/ggplot2__
+
+http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf

@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-<title>Supplement to &ldquo;Introducing R&rdquo; for PRI workshop January 2013 </title>
+<title>R Interest Group Hands-On Workshop January 2013 </title>
 
 <style type="text/css">
 body, td {
@@ -178,9 +178,22 @@ hljs.initHighlightingOnLoad();
 </head>
 
 <body>
-<h1>Supplement to &ldquo;Introducing R&rdquo; for PRI workshop January 2013 </h1>
+<h1>R Interest Group Hands-On Workshop January 2013 </h1>
 
 <p><em>Note: We will refer to the 4 default RStudio pane layout as UL(Upper Left), UR (Upper Right), LR(Lower Right), LL(Lower Left) in this document.  Be sure to install the packages: ggplot2 and splines.</em></p>
+
+<h3>RStudio Projects</h3>
+
+<p>From the RStudio menu bar select Project&ndash;&gt; Create Project.   Then select &#39;From New Directory&#39;.  Create a new folder for your project.  This will be assumed to be your  working directory for the session.  Once your new project has been created notice a few things:</p>
+
+<ul>
+<li>Locate the drop-down menu above the UR pane.  You can switch projects or set options specific to individual projects.</li>
+<li>If you had been using RStudio before, note that all panes have been cleared for your new project.<br/></li>
+<li>Look in the Files tab of the LR pane</li>
+<li>Confirm your working directory by typing the <code>getwd()</code> command in the LL console pane</li>
+<li>Close the project and reopen it. </li>
+<li>Look at the RStudio preferences and compare them to the Project Options</li>
+</ul>
 
 <h3>Section 2</h3>
 
@@ -189,6 +202,8 @@ hljs.initHighlightingOnLoad();
 <p>R is installed on the PRI lab computers, however RStudio is currently only available on the PRI windows servers (kiev and moscow) and the PRI linux server (finland). </p>
 
 <h3>Section 2.2</h3>
+
+<p>As you work through some of the examples in section 2.2, be sure to examine your Workspace in the UR pane.</p>
 
 <p>Programming languages deal with zero division differently.  In some cases any opertation attempting division by zero is prohibited.  R will allow you to proceed, but results vary.  Consider these calcuations&hellip;</p>
 
@@ -205,11 +220,22 @@ table(v)
 table(v,useNA=&#39;always&#39;)
 </code></pre>
 
-<p>Just be aware when you are calculating new variables.</p>
+<p>Regardless of what stat package you use, always be aware that missing data is handled differently in every package.  Do not assume, verify your results.</p>
 
 <h3>Section 2.3</h3>
 
 <p>For a list of matrix operators visit <a href="http://www.statmethods.net/advstats/matrix.html">http://www.statmethods.net/advstats/matrix.html</a></p>
+
+<h3>R Scripts</h3>
+
+<p>The commands you have just entered are in your History in the UR pane.   Scroll back through the history to re-execute a command by sending it <code>To Console</code>.   A better habit to establish is to store your commands in a script file.   Let&#39;s do this with all the commands you have run so far.  </p>
+
+<ul>
+<li>From the menu bar select File&ndash;&gt;New&ndash;&gt;R Script.   A new window will open in the UL pane</li>
+<li>Highlight all the commands in the history and select &#39;To Source&#39;</li>
+<li>Select one or more commands in the UL script window and click on the <code>Run</code> icon.  Now try the <code>Source</code> icon to run the entire script.<br/></li>
+<li>Save your script.  Notice that the color of the tab label changes from red to black.</li>
+</ul>
 
 <h3>Section 2.4</h3>
 
@@ -223,12 +249,6 @@ qplot(z,d, type=&quot;l&quot;, main=&quot;The Standard Normal Density&quot;, col
 
 <h3>Section 3.2</h3>
 
-<h4>RStudio Projects</h4>
-
-<p>From the RStudio Menu Bar select Project-&gt; Create project. Then select From New Directory.  </p>
-
-<p>Confirm that your working directory is the new directory you created with getwd().</p>
-
 <h4>Managing data</h4>
 
 <p>After reading data from an external source into R, you can save time in future sessions by saving the data as an R data frame.   Then if you clear the data from the workspace, you can retrieve it quickly.   Try saving the fpe data set to your working directory, clear it from your workspace and load it back in from the copy in your working directory.</p>
@@ -238,7 +258,7 @@ rm(fpe)
 load(file=&quot;fpe.Rdata&quot;)
 </code></pre>
 
-<p>For the exercise on page 13, you can use RStudio to create a text file.  Be sure to hit <return> in the last line of data. </p>
+<p>For the exercise on page 13, you can use RStudio to create a text file.  Be sure to hit <return> in the last line of data. There is also a little editor accessible with the <code>fix</code> function.</p>
 
 <h3>Section 3.4</h3>
 
@@ -283,17 +303,17 @@ plot(dist)
 <pre><code>search()
 </code></pre>
 
-<p>RStudio encourages the use of fully-qualified names with the &#39;code completion&#39; feature using the &#39;tab&#39; key.   From the console or an Rscript editing window, practice using this feature.  </p>
+<p>RStudio encourages the use of fully-qualified names with the &#39;code completion&#39; feature using the &#39;tab&#39; key.   From the console or an Rscript editing window, <strong>practice using this feature</strong>.  Code completion works with names of objects as well as commands.  Try typing a few characters in the command line and hit tab, see what is displayed.</p>
 
 <h3>Section 3.5</h3>
 
 <p>Note that when you use <code>Identify</code> the LR window will tell you that the command is active and you can use <code>esc</code> to exit.</p>
 
-<p>RStudio Projects will not automatically clear your data from the worspace.   Close your project and re-open it. </p>
-
 <h3>Section 4.4</h3>
 
 <p>Try examining <em>effort</em> and <em>effortg</em> with display, table and plot commands.   </p>
+
+<!--  PROBABLY NEED A WORKSHOP ON FACTOR VARS -->
 
 <h3>Section 5.2</h3>
 
@@ -320,9 +340,9 @@ plot(dist)
 
 <h3>More references:</h3>
 
-<p><strong>qplot/ggplot2</strong></p>
+<p><strong>RStudio tutorials</strong></p>
 
-<p><a href="http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf">http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf</a></p>
+<p><a href="http://www.rstudio.com/ide">http://www.rstudio.com/ide</a></p>
 
 <p><strong>Quick command summaries</strong></p>
 
@@ -331,6 +351,10 @@ plot(dist)
 <p><strong>A fun and informative blog</strong></p>
 
 <p><a href="http://www.r-bloggers.com">http://www.r-bloggers.com</a></p>
+
+<p><strong>Tutorial on qplot/ggplot2</strong></p>
+
+<p><a href="http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf">http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf</a></p>
 
 </body>
 
