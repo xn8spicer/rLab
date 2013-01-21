@@ -52,3 +52,12 @@ mydata$y.of <- ordered(mydata$y,
 # Fix
 x<-data.frame()
 fix(x)
+
+# Function help.  Highlight your code and look for the magic wand!!
+
+logit <- function (p) {
+  #requires vector of values between 0 and 1
+  log(p/(1-p))
+}
+
+logit(p)
