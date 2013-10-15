@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>TableID20fb70e33d96</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <style type="text/css">
+    body {
+          color: #444444;
+          font-family: Arial,Helvetica,sans-serif;
+          font-size: 75%;
+    }
+    a {
+          color: #4D87C7;
+          text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+ <!-- Table generated in R 2.15.3 by googleVis 0.4.2 package -->
+<!-- Sun Jul 28 16:25:36 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataTableID20fb70e33d96 () {
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ "Andhra Pradesh",
+"english telugu urdu",
+67.66,
+27.3,
+992 
+],
+[
+ "Arunachal Pradesh",
+"english",
+66.95,
+20.8,
+920 
+],
+[
+ "Assam",
+"assamese bengali regional bodo",
+73.18,
+12.9,
+954 
+],
+[
+ "Bihar",
+"hindi magadhi maithili urdu",
+63.82,
+10.5,
+916 
+],
+[
+ "Chhattisgarh",
+"chattisgarhi hindi",
+71.04,
+20.1,
+991 
+],
+[
+ "Goa",
+"konkani",
+87.4,
+62.2,
+968 
+],
+[
+ "Gujarat",
+"gujarati",
+79.31,
+37.4,
+918 
+],
+[
+ "Haryana",
+"hindi haryanvi ",
+76.64,
+28.9,
+877 
+],
+[
+ "Himachal Pradesh",
+"hindi",
+83.78,
+9.8,
+920 
+],
+[
+ "Jammu and Kashmir",
+"dogri kashmiri urdu",
+68.74,
+24.8,
+883 
+],
+[
+ "Jharkhand",
+"hindi",
+67.63,
+22.2,
+947 
+],
+[
+ "Karnataka",
+"kannada",
+75.6,
+34,
+968 
+],
+[
+ "Kerala",
+"malayalam english",
+93.91,
+26,
+1084 
+],
+[
+ "Madhya Pradesh",
+"hindi",
+70.63,
+26.5,
+930 
+],
+[
+ "Maharashtra",
+"marathi",
+82.91,
+42.4,
+925 
+],
+[
+ "Manipur",
+"manipuri",
+79.85,
+25.1,
+987 
+],
+[
+ "Meghalaya",
+"english garo hindi khasi pnar",
+75.48,
+19.6,
+986 
+],
+[
+ "Mizoram",
+"mizo",
+91.58,
+49.6,
+975 
+],
+[
+ "Nagaland",
+"english",
+80.11,
+17.2,
+931 
+],
+[
+ "Orissa",
+"oriya",
+73.45,
+15,
+978 
+],
+[
+ "Punjab",
+"punjabi",
+76.68,
+33.9,
+893 
+],
+[
+ "Rajasthan",
+"hindi",
+67.06,
+23.4,
+926 
+],
+[
+ "Sikkim",
+"nepali bhutia gurung lepcha limbu manggar newari sherpa sunwar tamang",
+82.2,
+11.1,
+889 
+],
+[
+ "Tamil Nadu",
+"tamil",
+80.33,
+44,
+995 
+],
+[
+ "Tripura",
+"bengali tripuri",
+87.75,
+17.1,
+961 
+],
+[
+ "Uttar Pradesh",
+"hindi urdu",
+69.72,
+20.8,
+908 
+],
+[
+ "Uttarakhand",
+"hindi sanskrit",
+79.63,
+25.7,
+963 
+],
+[
+ "West Bengal",
+"bengali english",
+77.08,
+28,
+947 
+],
+[
+ "Andaman and Nicobar Islands",
+"english",
+86.27,
+32.6,
+878 
+],
+[
+ "Chandigarh",
+"english hindi punjabi",
+86.43,
+89.8,
+818 
+],
+[
+ "Dadra and Nagar Haveli",
+"english gujarati hindi marathi",
+77.65,
+22.9,
+775 
+],
+[
+ "Daman and Diu",
+"english gujarati hindi marathi",
+87.07,
+36.2,
+618 
+],
+[
+ "Lakshadweep",
+"english malayalam",
+92.28,
+44.5,
+946 
+],
+[
+ "Delhi",
+"english hindi punjabi urdu",
+86.34,
+93.2,
+866 
+],
+[
+ "Pondicherry",
+"french  tamil regional malayalam telugu",
+86.55,
+66.6,
+1038 
+] 
+];
+data.addColumn('string','Name');
+data.addColumn('string','OfficialLanguages');
+data.addColumn('number','LiteracyRateinPercent');
+data.addColumn('number','UrbanToTotalPopPercent');
+data.addColumn('number','SexRatio');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartTableID20fb70e33d96() {
+  var data = gvisDataTableID20fb70e33d96();
+  var options = {};
+options["allowHtml"] = true;
+options["width"] =    800;
+options["height"] =    400;
+
+     var chart = new google.visualization.Table(
+       document.getElementById('TableID20fb70e33d96')
+     );
+     chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  var chartid = "table";
+
+  // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+  var i, newPackage = true;
+  for (i = 0; newPackage && i < pkgs.length; i++) {
+    if (pkgs[i] === chartid)
+      newPackage = false;
+  }
+  if (newPackage)
+    pkgs.push(chartid);
+
+  // Add the drawChart function to the global list of callbacks
+  callbacks.push(drawChartTableID20fb70e33d96);
+})();
+function displayChartTableID20fb70e33d96() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+    var pkgCount = pkgs.length;
+    google.load("visualization", "1", { packages:pkgs, callback: function() {
+      if (pkgCount != pkgs.length) {
+        // Race condition where another setTimeout call snuck in after us; if
+        // that call added a package, we must not shift its callback
+        return;
+      }
+      while (callbacks.length > 0)
+        callbacks.shift()();
+    } });
+  }, 100);
+}
+ 
+// jsFooter
+ </script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID20fb70e33d96"></script>
+ 
+<!-- divChart -->
+  
+<div id="TableID20fb70e33d96"
+  style="width: 800px; height: 400px;">
+</div>
+ <div><span>Data: stateut &#8226; Chart ID: <a href="Chart_TableID20fb70e33d96.html">TableID20fb70e33d96</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+R version 2.15.3 (2013-03-01) &#8226; <a href="http://code.google.com/p/google-motion-charts-with-r/">googleVis-0.4.2</a>
+&#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/table.html#Data_Policy">Data Policy</a>
+</span></div>
+</body>
+</html>

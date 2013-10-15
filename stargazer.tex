@@ -1,0 +1,99 @@
+\documentclass{article}
+
+\title{Supplement to Introducing R}
+\author{R Interest Group}
+\date{January 2013}
+\usepackage{Sweave}
+\begin{document}
+\maketitle
+\input{stargazer-concordance}
+\emph{
+Note: We will refer to the 4 default RStudio pane layout as UL(Upper Left), UR (Upper Right), LR(Lower Right), LL(Lower Left) in this document.  Be sure to install the packages:} \texttt{ggplot2} and \texttt{splines.}
+
+
+\section*{... Section 2}
+R is updated frequently, if you want to know the current version, visit [http://cran.r-project.org](http://cran.r-project.org).   
+
+R is installed on the PRI lab computers, however RStudio is currently only available on the PRI windows servers (kiev and moscow) and the PRI linux server (finland). 
+
+\section*{... Section 2.2}
+Programming languages deal with zero division differently.  In some cases any opertation attempting division by zero is prohibited.  R will allow you to proceed, but results vary.  Consider these calcuations...
+\begin{Schunk}
+\begin{Sinput}
+> 1/0
+> 0/0
+> -1/0
+> 1/0 == 0/0
+> (1/0) == (-1/0)
+> (1/0) == (2/0)
+> 1/0==0/0
+\end{Sinput}
+\end{Schunk}
+\begin{Schunk}
+\begin{Sinput}
+> # Store these values in a dataframe and print a table
+> v<-data.frame(c(0/0,1/0,-1/0,1/0==0/0))
+> table(v)
+\end{Sinput}
+\begin{Soutput}
+v
+-Inf  Inf 
+   1    1 
+\end{Soutput}
+\begin{Sinput}
+> table(v,useNA='always')
+\end{Sinput}
+\begin{Soutput}
+v
+-Inf  Inf  NaN <NA> 
+   1    1    1    1 
+\end{Soutput}
+\end{Schunk}
+\begin{Schunk}
+\begin{Sinput}
+> load(file="fpe.Rdata")
+> library(stargazer)
+> stargazer(fpe)
+\end{Sinput}
+% Table created by StarGazer v.2.0.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Jan 14, 2013 - 21:31:37
+\begin{table}[htb] \centering 
+  \caption{} 
+\footnotesize 
+
+\begin{tabular}{@{\extracolsep{5pt}}l c c c c c } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+Statistic & \multicolumn{1}{c}{\textit{N}} & \multicolumn{1}{c}{\textit{Mean}} & \multicolumn{1}{c}{\textit{St. Dev.}} & \multicolumn{1}{c}{\textit{Min}} & \multicolumn{1}{c}{\textit{Max}} \\ 
+\hline \\[-1.8ex] 
+setting & 20 & 72.100 & 15.738 & 35 & 91 \\ 
+effort & 20 & 9.550 & 7.550 & 0 & 23 \\ 
+change & 20 & 14.300 & 11.810 & 0 & 40 \\ 
+\hline \\[-1.8ex] 
+\normalsize 
+\end{tabular} 
+\end{table} \begin{Sinput}
+> stargazer(fpe[1:4,],summary=FALSE)
+\end{Sinput}
+% Table created by StarGazer v.2.0.1 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
+% Date and time: Mon, Jan 14, 2013 - 21:31:37
+\begin{table}[htb] \centering 
+  \caption{} 
+\footnotesize 
+
+\begin{tabular}{@{\extracolsep{5pt}} c c c } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+\textit{setting} & \textit{effort} & \textit{change} \\ 
+\hline \\[-1.8ex] 
+$46$ & $0$ & $1$ \\ 
+$74$ & $0$ & $10$ \\ 
+$89$ & $16$ & $29$ \\ 
+$77$ & $16$ & $25$ \\ 
+\hline \\[-1.8ex] 
+\normalsize 
+\end{tabular} 
+\end{table} \end{Schunk}
+
+
+\end{document}

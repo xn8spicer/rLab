@@ -11,6 +11,7 @@ effort<-effort + 1
 search()
 table(fpe$effort)
 
+
 ######## Factors may be worth an entire session
 # http://www.stat.berkeley.edu/classes/s133/factors.html
 

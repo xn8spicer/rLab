@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>GeoChartID20fb66ffc693</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <style type="text/css">
+    body {
+          color: #444444;
+          font-family: Arial,Helvetica,sans-serif;
+          font-size: 75%;
+    }
+    a {
+          color: #4D87C7;
+          text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+ <!-- GeoChart generated in R 2.15.3 by googleVis 0.4.2 package -->
+<!-- Sun Jul 28 16:25:39 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataGeoChartID20fb66ffc693 () {
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ "Andhra Pradesh",
+27.3 
+],
+[
+ "Arunachal Pradesh",
+20.8 
+],
+[
+ "Assam",
+12.9 
+],
+[
+ "Bihar",
+10.5 
+],
+[
+ "Chhattisgarh",
+20.1 
+],
+[
+ "Goa",
+62.2 
+],
+[
+ "Gujarat",
+37.4 
+],
+[
+ "Haryana",
+28.9 
+],
+[
+ "Himachal Pradesh",
+9.8 
+],
+[
+ "Jammu and Kashmir",
+24.8 
+],
+[
+ "Jharkhand",
+22.2 
+],
+[
+ "Karnataka",
+34 
+],
+[
+ "Kerala",
+26 
+],
+[
+ "Madhya Pradesh",
+26.5 
+],
+[
+ "Maharashtra",
+42.4 
+],
+[
+ "Manipur",
+25.1 
+],
+[
+ "Meghalaya",
+19.6 
+],
+[
+ "Mizoram",
+49.6 
+],
+[
+ "Nagaland",
+17.2 
+],
+[
+ "Orissa",
+15 
+],
+[
+ "Punjab",
+33.9 
+],
+[
+ "Rajasthan",
+23.4 
+],
+[
+ "Sikkim",
+11.1 
+],
+[
+ "Tamil Nadu",
+44 
+],
+[
+ "Tripura",
+17.1 
+],
+[
+ "Uttar Pradesh",
+20.8 
+],
+[
+ "Uttarakhand",
+25.7 
+],
+[
+ "West Bengal",
+28 
+],
+[
+ "Andaman and Nicobar Islands",
+32.6 
+],
+[
+ "Chandigarh",
+89.8 
+],
+[
+ "Dadra and Nagar Haveli",
+22.9 
+],
+[
+ "Daman and Diu",
+36.2 
+],
+[
+ "Lakshadweep",
+44.5 
+],
+[
+ "Delhi",
+93.2 
+],
+[
+ "Pondicherry",
+66.6 
+] 
+];
+data.addColumn('string','Name');
+data.addColumn('number','UrbanToTotalPopPercent');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartGeoChartID20fb66ffc693() {
+  var data = gvisDataGeoChartID20fb66ffc693();
+  var options = {};
+options["width"] =    540;
+options["height"] =    400;
+options["region"] = "IN";
+options["displayMode"] = "region";
+options["resolution"] = "provinces";
+options["colorAxis"] = {colors:['red','orange','yellow','blue', 'green']};
+
+     var chart = new google.visualization.GeoChart(
+       document.getElementById('GeoChartID20fb66ffc693')
+     );
+     chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  var chartid = "geochart";
+
+  // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+  var i, newPackage = true;
+  for (i = 0; newPackage && i < pkgs.length; i++) {
+    if (pkgs[i] === chartid)
+      newPackage = false;
+  }
+  if (newPackage)
+    pkgs.push(chartid);
+
+  // Add the drawChart function to the global list of callbacks
+  callbacks.push(drawChartGeoChartID20fb66ffc693);
+})();
+function displayChartGeoChartID20fb66ffc693() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+    var pkgCount = pkgs.length;
+    google.load("visualization", "1", { packages:pkgs, callback: function() {
+      if (pkgCount != pkgs.length) {
+        // Race condition where another setTimeout call snuck in after us; if
+        // that call added a package, we must not shift its callback
+        return;
+      }
+      while (callbacks.length > 0)
+        callbacks.shift()();
+    } });
+  }, 100);
+}
+ 
+// jsFooter
+ </script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGeoChartID20fb66ffc693"></script>
+ 
+<!-- divChart -->
+  
+<div id="GeoChartID20fb66ffc693"
+  style="width: 540px; height: 400px;">
+</div>
+ <div><span>Data: stateut &#8226; Chart ID: <a href="Chart_GeoChartID20fb66ffc693.html">GeoChartID20fb66ffc693</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+R version 2.15.3 (2013-03-01) &#8226; <a href="http://code.google.com/p/google-motion-charts-with-r/">googleVis-0.4.2</a>
+&#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/geochart.html#Data_Policy">Data Policy</a>
+</span></div>
+</body>
+</html>

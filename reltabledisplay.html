@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>TableID20fb56e07cc0</title>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <style type="text/css">
+    body {
+          color: #444444;
+          font-family: Arial,Helvetica,sans-serif;
+          font-size: 75%;
+    }
+    a {
+          color: #4D87C7;
+          text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+ <!-- Table generated in R 2.15.3 by googleVis 0.4.2 package -->
+<!-- Sun Jul 28 16:25:36 2013 -->
+
+
+<!-- jsHeader -->
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataTableID20fb56e07cc0 () {
+  var data = new google.visualization.DataTable();
+  var datajson =
+[
+ [
+ "Percentofpopulation",
+"80.5",
+"13.4",
+"2.3",
+"1.9",
+"0.8",
+"0.4",
+"0.6" 
+],
+[
+ "GrowthofPopPercent91Through01",
+"20.3",
+"29.5",
+"22.6",
+"18.2",
+"24.5",
+"26.0",
+"103.1" 
+],
+[
+ "SexRatio",
+"935",
+"940",
+"1009",
+"895",
+"955",
+"940",
+"1000" 
+],
+[
+ "LiteracyRateforAge7andabove",
+"75.5",
+"60.0",
+"90.3",
+"70.4",
+"73.0",
+"95.0",
+"50.0" 
+],
+[
+ "WorkParticipationRate",
+"40.4",
+"31.3",
+"39.7",
+"37.7",
+"40.6",
+"32.9",
+"48.4" 
+],
+[
+ "Ruralsexratio",
+"1000",
+"953",
+"1001",
+"895",
+"958",
+"937",
+"995" 
+],
+[
+ "Urbansexratio",
+"922",
+"907",
+"1026",
+"886",
+"944",
+"941",
+"966" 
+],
+[
+ "ChildsexratioUptoAge6",
+"925",
+"950",
+"964",
+"786",
+"942",
+"870",
+"976" 
+] 
+];
+data.addColumn('string','Composition');
+data.addColumn('string','Hindus');
+data.addColumn('string','Muslims');
+data.addColumn('string','Christians');
+data.addColumn('string','Sikhs');
+data.addColumn('string','Buddhist');
+data.addColumn('string','Jains');
+data.addColumn('string','Others');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartTableID20fb56e07cc0() {
+  var data = gvisDataTableID20fb56e07cc0();
+  var options = {};
+options["allowHtml"] = true;
+options["width"] =    800;
+options["height"] =    200;
+
+     var chart = new google.visualization.Table(
+       document.getElementById('TableID20fb56e07cc0')
+     );
+     chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  var chartid = "table";
+
+  // Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+  var i, newPackage = true;
+  for (i = 0; newPackage && i < pkgs.length; i++) {
+    if (pkgs[i] === chartid)
+      newPackage = false;
+  }
+  if (newPackage)
+    pkgs.push(chartid);
+
+  // Add the drawChart function to the global list of callbacks
+  callbacks.push(drawChartTableID20fb56e07cc0);
+})();
+function displayChartTableID20fb56e07cc0() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+    var pkgCount = pkgs.length;
+    google.load("visualization", "1", { packages:pkgs, callback: function() {
+      if (pkgCount != pkgs.length) {
+        // Race condition where another setTimeout call snuck in after us; if
+        // that call added a package, we must not shift its callback
+        return;
+      }
+      while (callbacks.length > 0)
+        callbacks.shift()();
+    } });
+  }, 100);
+}
+ 
+// jsFooter
+ </script>
+ 
+<!-- jsChart -->  
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartTableID20fb56e07cc0"></script>
+ 
+<!-- divChart -->
+  
+<div id="TableID20fb56e07cc0"
+  style="width: 800px; height: 200px;">
+</div>
+ <div><span>Data: reltable &#8226; Chart ID: <a href="Chart_TableID20fb56e07cc0.html">TableID20fb56e07cc0</a></span><br /> 
+<!-- htmlFooter -->
+<span> 
+R version 2.15.3 (2013-03-01) &#8226; <a href="http://code.google.com/p/google-motion-charts-with-r/">googleVis-0.4.2</a>
+&#8226; <a href="https://developers.google.com/terms/">Google Terms of Use</a> &#8226; <a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/table.html#Data_Policy">Data Policy</a>
+</span></div>
+</body>
+</html>
