@@ -180,11 +180,13 @@ hljs.initHighlightingOnLoad();
 <body>
 <h1>R Interest Group Hands-On Workshop January 2013 </h1>
 
+<p>We will go over the handout <a href="http://data.princeton.edu/R/">Introducing R</a> by G&eacute;rman Rodr&iacute;guez.  This page will highlight the benefits of using RStudio and add a few additional exercises to be used in combination with Dr. Rodr&iacute;guez&#39; handout. </p>
+
 <p><em>Note: We will refer to the 4 default RStudio pane layout as UL(Upper Left), UR (Upper Right), LR(Lower Right), LL(Lower Left) in this document.  Be sure to install the packages: ggplot2 and splines.</em></p>
 
 <h3>RStudio Projects</h3>
 
-<p>From the RStudio menu bar select Project&ndash;&gt; Create Project.   Then select &#39;From New Directory&#39;.  Create a new folder for your project.  This will be assumed to be your  working directory for the session.  Once your new project has been created notice a few things:</p>
+<p>From the RStudio menu bar select Project&ndash;&gt; Create Project.   Then select &#39;From New Directory&#39;.  Create a new folder for your project.  This will be assumed to be your working directory for the session.  Once your new project has been created notice a few things:</p>
 
 <ul>
 <li>Locate the drop-down menu above the UR pane.  You can switch projects or set options specific to individual projects.</li>
@@ -228,12 +230,12 @@ table(v,useNA=&#39;always&#39;)
 
 <h3>R Scripts</h3>
 
-<p>The commands you have just entered are in your History in the UR pane.   Scroll back through the history to re-execute a command by sending it <code>To Console</code>.   A better habit to establish is to store your commands in a script file.   Let&#39;s do this with all the commands you have run so far.  </p>
+<p>The commands you have just entered are in your History in the UR pane.   Scroll back through the history to re-execute a command by sending it &#39;To Console&#39;.   A better habit to establish is to store your commands in a script file.   Let&#39;s do this with all the commands you have run so far.  </p>
 
 <ul>
 <li>From the menu bar select File&ndash;&gt;New&ndash;&gt;R Script.   A new window will open in the UL pane</li>
 <li>Highlight all the commands in the history and select &#39;To Source&#39;</li>
-<li>Select one or more commands in the UL script window and click on the <code>Run</code> icon.  Now try the <code>Source</code> icon to run the entire script.<br/></li>
+<li>Select one or more commands in the UL script window and click on the &#39;Run&#39; icon.  Now try the &#39;Source&#39; icon to run the entire script.<br/></li>
 <li>Save your script.  Notice that the color of the tab label changes from red to black.</li>
 </ul>
 
@@ -337,6 +339,16 @@ plot(dist)
 <h3>Section 5.4</h3>
 
 <p>On page 33, the step command should refer to the object &#39;lrfit0&#39;, not &#39;additive&#39;</p>
+
+<h3>Section 6</h3>
+
+<p>Type the statements to calculate a logit for the values of vector of proportions <em>p</em> .</p>
+
+<pre><code>p&lt;-c(.5, .3, .6)
+log(p/(1-p))
+</code></pre>
+
+<p>Now highlight your code and look for the magic wand in the UL pane.  Select the &#39;Extract Function&#39; option, supply the function name &#39;logit&#39; and RStudio will supply the punction to define your function.  Use the <code>Run</code> command and note that your function is now in your workspace.  </p>
 
 <h3>More references:</h3>
 
